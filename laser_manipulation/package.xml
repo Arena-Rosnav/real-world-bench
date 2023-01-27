@@ -1,0 +1,39 @@
+<package>
+  <name>laser_manipulation</name>
+  <version>0.0.1</version>
+  <description>
+      Sensor manipulation node which uses external obstacle information in order to manipulate the LaserScan data, such that certain obstacls i.e humans can be made visible, even though they do not exist in real life or simulation.
+  </description>
+
+  <license>BSD</license>
+  <author>Jorge Santos</author> 
+  <maintainer email="todo@todo.com">TODO</maintainer>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>tf</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>yocs_math_toolkit</build_depend>
+  <build_depend>ford_msgs</build_depend>
+  <build_depend>pedsim_msgs</build_depend>
+
+
+  <run_depend>tf</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>yocs_math_toolkit</run_depend>
+  <run_depend>ford_msgs</run_depend>
+  <run_depend>pedsim_msgs</run_depend>
+
+
+  <!-- Temporally included to support file reading auxiliary scripts -->
+  <run_depend>rospy</run_depend>
+  <run_depend>rospy_message_converter</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+
+  <export>
+  </export>
+</package>
