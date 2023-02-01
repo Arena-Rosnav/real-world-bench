@@ -6,7 +6,13 @@ This repository contains set of tools intended for testing and benchmarking navi
 
 
 # Usage
-The laser_manipulation node depends on a source of virtual obstacles to be published under **/simulated_agents** in the **TODO:MSG_FORMAT** type. 
-We provide two different options:
-- [arena-tools]() scenario
-- [Pedsim]() simulation
+The laser_manipulation node depends on a source of virtual obstacles to be published under **/simulated_agents** in the [**pedsim_msgs::AgentStates**](https://github.com/Arena-Rosnav/pedsim_ros/tree/master/pedsim_msgs/msg) format. We provide two different options as sources of obstacles:
+- [arena-tools](https://github.com/Arena-Rosnav/arena-tools) scenario
+- [Pedsim](https://github.com/Arena-Rosnav/pedsim_ros) simulation
+
+## Arena-tools
+Generic program call
+```bash
+roslaunch real-world-bench start_arena_bench.launch scenario_path:=[path]
+```
+## Arena-tools
