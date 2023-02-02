@@ -13,6 +13,18 @@ The laser_manipulation node depends on a source of virtual obstacles to be publi
 ## Arena-tools
 Generic program call
 ```bash
-roslaunch real-world-bench start_arena_bench.launch scenario_path:=[path]
+roslaunch laser_manipulation start_arena.launch scenario_path:=[path] #Path to a specific scenario.json file needs to be given
 ```
-## Arena-tools
+## Pedsim
+The manipulation node assumes, that a working pedsims simulation is already launched and publishing obstacles information, so you need to make sure that pedsim is running before using this call.
+```bash
+roslaunch laser_manipulation start_pedsim.launch
+```
+## General program arguments
+| Name             | Default                 | Type             | Description                                                                                                                                                                                                                                                        |
+| ---------------- | ----------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| laser_scan_topic            | scan                 | string              | Name of the topic, on which the robot is publishing scan data                                                                                                                                                                                                                             |
+| output_topic    | scan_manipulated                     |        string          | Topic under, which manipulated scan will be published                                                                                                                                                                                                                               |
+| radius      | 0.1                | double | Defines the radius of each virtual obstacle model                                                                                                                                                                                                                                          |
+| viz |              true           | bool           | Whether visualization of obstacles should be published |
+
