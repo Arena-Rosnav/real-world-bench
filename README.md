@@ -4,7 +4,7 @@ This repository contains set of tools intended for testing and benchmarking navi
 
 # Demo
 
-<video src="https://user-images.githubusercontent.com/41898845/218050957-a3049ef3-d2a5-4fb7-a92a-0f3cbff4c732.mp4" controls="controls" style="max-width: 730px;">
+<video src="images/output.mp4" controls="controls" style="max-width: 730px;">
 </video>
 
 # Usage
