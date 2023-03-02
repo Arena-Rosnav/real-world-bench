@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="laser_scan_topic" default="scan"/>
+  <arg name="output_topic" default="scan_manipulated"/>
+  <arg name="radius" default="0.1"/>
+  <arg name="viz" default="true"/>
+  <arg name="scenario_path"/>
+
+  <node name="ped_relay" type="relay" pkg="topic_tools" args="pedsim_simulator/simulated_agents simulated_agents"/>
+  <node name="agents_pub" type="agent_pos_gen.py" pkg="laser_manipulation">
+    <param name="scenario_json_path" value="$(arg scenario_path)"/>
+  </node>
+  <node name="laser_manipulator" type="laser_manipulation_node" pkg="laser_manipulation">
+    <param name="laser_scan_topic" value="$(arg laser_scan_topic)"/>
+    <param name="output_topic" value="$(arg output_topic)"/>
+    <param name="radius" value="$(arg radius)"/>
+  </node>
+
+
+  <node name="agents_visualizer" type="agents_visualizer.py" pkg="laser_manipulation" if="$(eval arg('viz') == true)"/>
+
+</launch>
